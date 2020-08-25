@@ -141,3 +141,16 @@ class Solution {
         return res;
     }
 }
+
+   /*
+    you could either have-
+L array appearing first and then M array
+or
+M array appearing first and then L array
+Therefore for a given index i in the loop:
+find maximum sum for L length before index i and add it with every M length sum right to it --------(equation 1)
+find maximum sum for M length before index i and add it with every L length sum right to it---------(equation 2)
+now in every loop do res = max(res , max( equation 1, equation 2))
+
+This way overlapping is also avoided.
+*/
